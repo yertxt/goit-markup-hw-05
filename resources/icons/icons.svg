@@ -65,5 +65,10 @@
 <path d="M2 12h6v18h-6v-18z"></path>
 <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
 </symbol>
+<symbol id="icon-eclipse" viewBox="0 0 32 32">
+<circle cx="15" cy="15" r="15" fill="#fff"/>
+<circle cx="15" cy="15" r="14.5" stroke="#000" stroke-opacity=".1"/>
+<path fill="#000" d="M21 10.108 19.892 9 15.5 13.392 11.108 9 10 10.108l4.392 4.392L10 18.892 11.108 20l4.392-4.392L19.892 20 21 18.892 16.608 14.5 21 10.108Z"/>
+</symbol>
 </defs>
 </svg>

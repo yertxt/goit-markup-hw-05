@@ -73,7 +73,17 @@
           SOLUCIONES EFICICACES PARA <br />
           SU NEGOCIO
         </h1>
-        <button type="button">Solicite nuestro servicio</button>
+        <button type="button" data-modal-open>Solicite nuestro servicio</button>
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="unstyle" data-modal-close>
+              <svg class="modal-close-button">
+                <use href="./resources/icons/icons.svg#icon-eclipse"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
 
       <!-- Details -->
@@ -487,5 +497,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
