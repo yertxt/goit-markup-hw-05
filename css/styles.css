@@ -7,6 +7,7 @@
   --brand-color-icons: #afb1b8;
   --brand-standar-white: #fff;
   --brand-color-blueb: #2196f3e5;
+  --brand-standar-animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -78,6 +79,7 @@ img {
   line-height: 1.1;
   letter-spacing: 0.28px;
   padding: 32px 0px;
+  transition: color 250ms var(--brand-standar-animation);
 }
 
 .first_header_a:hover {
@@ -96,6 +98,7 @@ img {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.28px;
+  transition: color 250ms var(--brand-standar-animation);
 }
 
 .header_hover:hover > .second_header_a {
@@ -150,32 +153,27 @@ img {
   fill: var(--brand-color-icons);
 }
 
-.iconsli:hover {
-  background-color: var(--brand-color-blue);
-  border-radius: 100%;
-}
-
-.iconsli:hover > .icons {
-  fill: var(--brand-standar-white);
-}
-
-.iconsli:focus {
-  background-color: var(--brand-color-blue);
-  border-radius: 100%;
-  outline: none;
-}
-
-.iconsli:focus > .icons {
-  fill: var(--brand-standar-white);
-  outline: none;
-}
-
 .iconsli {
   width: 44px;
   height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 100%;
+  transition: color 250ms var(--brand-standar-animation),
+    background-color 250ms var(--brand-standar-animation);
+}
+
+.iconsli:hover,
+.iconsli:focus {
+  background-color: var(--brand-color-blue);
+  outline: none;
+}
+
+.iconsli:hover > .icons,
+.iconsli:focus > .icons {
+  fill: var(--brand-standar-white);
+  outline: none;
 }
 
 .icons_footer {
@@ -395,6 +393,7 @@ img {
   width: 106px;
   height: 52px;
   fill: #afb1b8;
+  transition: fill 250ms var(--brand-standar-animation);
 }
 
 .icons_clients_li {
@@ -403,6 +402,7 @@ img {
   flex-basis: calc((100% - 4 * 30px) / 6);
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: border-color 250ms var(--brand-standar-animation);
 }
 
 .icons_clients_li:hover {
@@ -444,6 +444,7 @@ img {
   line-height: 1.7;
   letter-spacing: 0.42px;
   font-style: normal;
+  transition: color 250ms var(--brand-standar-animation);
 }
 .footer_b:hover {
   color: var(--brand-color-blue);
@@ -459,6 +460,10 @@ img {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.port_li_hov {
+  transition: box-shadow 250ms var(--brand-standar-animation);
 }
 
 .port_li_hov:hover {
@@ -478,15 +483,11 @@ img {
   border-radius: 4px;
   color: var(--brand-color-black);
   padding: 4px 24px;
+  transition: background-color 250ms var(--brand-standar-animation),
+    box-shadow 250ms var(--brand-standar-animation);
 }
 
-.port-button:hover {
-  background: var(--brand-color-blue);
-  color: var(--brand-standar-white);
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-}
-
+.port-button:hover,
 .port-button:focus {
   background: var(--brand-color-blue);
   color: var(--brand-standar-white);
@@ -512,7 +513,7 @@ img {
   padding: 63px 24px;
   background-color: var(--brand-color-blueb);
   color: var(--brand-standar-white);
-  transition: cubic-bezier(0.4, 0, 0.2, 1), 250ms;
+  transition: 250ms var(--brand-standar-animation);
 }
 
 .port_li_hov:hover .img_card_text {
